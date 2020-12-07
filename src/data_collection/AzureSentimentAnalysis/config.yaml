@@ -1,0 +1,4 @@
+search_tweets_api:
+  bearer_token: ENTER A TWITTER API BEARER TOKEN HERE
+azure:
+  subscription_key: ENTER AN AZURE SUBSCRIPTION KEY HERE

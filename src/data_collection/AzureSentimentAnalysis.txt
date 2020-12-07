@@ -1,0 +1,30 @@
+README "getSentiments.py" - 
+
+
+This script requires a valid Twitter API account and Azure Text Analytics endpoint service with bearer_token and subscription_key set in 'config.yaml'.
+
+
+The script has two main functions: main1() and main2()
+
+	Each produce sentiment analysis results on the tweet contents collected, but each are designed to process only one of the two data sets we used.
+
+	main1: 
+		This function is desgined to process the sentiments of the tweets contained in our Random Users data set.
+			It creates a 'document' format for the Azure Text Analytics endpoint and then processes the returned output and adds
+			the result to each processed tweet object as 'sentiment_score'.
+
+		**Input file(s): 'RandomUsers_WithTweets.json'
+		**Output file(s): 'RandomUsers_WithTweets_Sentiments.json' a json file that contains user objects and their tweet objects,
+					each tweet object containing a sentiment_score produced by Azure's Text Analytics.
+
+	main2:
+		This function is designed to process the sentiments of the tweets contained in each of our Celebrity User data sets.
+			It creates a 'document' format for the Azure Text Analytics endpoint and then processes the returned output and adds
+			the result to each processed tweet object as 'sentiment_score'.
+
+	
+
+		**Input file(s): '*CelebrityAccountName*.json' a json file containing the tweet objects of one specific celebrity user.
+		**Output file(s):m '*CelebrityAccountName*.json' a json file containing the tweet objects of one specific celebrity user,
+					each tweet object containing a sentiment_score produced by Azure's Text Analytics.
+
